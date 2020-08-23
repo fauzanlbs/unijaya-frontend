@@ -42,7 +42,7 @@ const columns = [
     text: "ID",
     // sort: true,
     headerStyle: () => {
-      return { width: "12%", backgroundColor: "lightgrey", fontSize: "20px" };
+      return { width: "12%", backgroundColor: "lightgrey", fontSize: "15px"};
     },
   },
   {
@@ -50,7 +50,7 @@ const columns = [
     text: "USER",
     // sort: true,
     headerStyle: () => {
-      return { width: "21%", backgroundColor: "lightgrey", fontSize: "20px" };
+      return { width: "21%", backgroundColor: "lightgrey", fontSize: "15px" };
     },
   },
   {
@@ -58,30 +58,30 @@ const columns = [
     text: "JUDUL",
     // sort: true,
     headerStyle: () => {
-      return { fontSize: "20px", backgroundColor: "lightgrey" };
+      return { backgroundColor: "lightgrey", fontSize: "15px" };
     },
   },
   {
     dataField: "link",
     text: "AKSI",
     headerStyle: () => {
-      return { width: "30%", fontSize: "20px", backgroundColor: "lightgrey" };
+      return { width: "30%", fontSize: "15px", backgroundColor: "lightgrey" };
     },
     formatter: (rowContent, row) => {
       return (
         <div>
           <Link to={"detail/" + row.id}>
-            <Button style={{width:'50px',padding:'5px'}} color="dark" className="m-2 ">
+            <Button style={{width:'52px',padding:'5px'}} color="dark" className="m-2 ">
               <FontAwesomeIcon icon={faInfo} />
             </Button>
           </Link>
           <Link to={"edit/" + row.id}>
-            <Button style={{width:'50px',padding:'5px'}} color="dark" className="m-2">
+            <Button style={{width:'52px',padding:'5px'}} color="dark" className="m-2">
               <FontAwesomeIcon icon={faEdit} />
             </Button>
           </Link>
 
-          <Button style={{width:'50px',padding:'5px'}}
+          <Button style={{width:'52px',padding:'5px'}}
             onClick={() => {
               onDelete(row.id);
             }}

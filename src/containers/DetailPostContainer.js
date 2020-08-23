@@ -40,45 +40,43 @@ class DetailPostContainer extends Component {
 
   render() {
     return (
-      <div className="m-5">
-        <Container>
-          <BackComponent />
-          <div className="card">
-            <div className="card-body">
-              <h5 className="card-title">Detail Post</h5>
-              <div className="card-text">
-                <div className="form-group">
-                  <label>User</label>
-                  <input
-                    type="text"
-                    name="user_id"
-                    value={this.state.postData.user_id}
-                    className="form-control"
-                  />
-                </div>
-                <div className="form-group">
-                  <label>Judul</label>
-                  <input
-                    type="text"
-                    value={this.state.postData.title}
-                    className="form-control"
-                    name="title"
-                  />
-                </div>
-                <div className="form-group">
-                  <label>Isi</label>
-                  <textarea
-                    value={this.state.postData.body}
-                    name="body"
-                    cols="30"
-                    rows="10"
-                    className="form-control"
-                  ></textarea>
-                </div>
+      <div className="m-3">
+        <BackComponent />
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">Detail Post</h5>
+            <div className="card-text">
+              <div className="form-group">
+                <label>User</label>
+                <input
+                  type="text"
+                  name="user_id"
+                  value={this.state.postData.user_id}
+                  className="form-control"
+                />
+              </div>
+              <div className="form-group">
+                <label>Judul</label>
+                <input
+                  type="text"
+                  value={this.state.postData.title}
+                  className="form-control"
+                  name="title"
+                />
+              </div>
+              <div className="form-group">
+                <label>Isi</label>
+                <textarea
+                  value={this.state.postData.body}
+                  name="body"
+                  cols="30"
+                  rows="10"
+                  className="form-control"
+                ></textarea>
               </div>
             </div>
           </div>
-        </Container>
+        </div>
       </div>
     );
   }

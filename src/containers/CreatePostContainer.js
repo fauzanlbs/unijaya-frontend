@@ -62,59 +62,57 @@ class CreatePostContainer extends Component {
   }
   render() {
     return (
-      <div className="m-5">
-        <Container>
-          <BackComponent />
-          <div className="card">
-            <div className="card-body">
-              <h5 className="card-title">Tambah Post</h5>
-              <div className="card-text">
-                <div className="form-group">
-                  <label>User</label>
-                  <input
-                    type="text"
-                    name="user_id"
-                    value={this.state.user_id}
-                    onChange={this.handleInput}
-                    className="form-control"
-                  />
-                </div>
-                <div className="form-group">
-                  <label>Judul</label>
-                  <input
-                    type="text"
-                    value={this.state.title}
-                    className="form-control"
-                    name="title"
-                    onChange={this.handleInput}
-                  />
-                </div>
-                <div className="form-group">
-                  <label>Isi</label>
-                  <textarea
-                    value={this.state.body}
-                    onChange={this.handleInput}
-                    name="body"
-                    cols="30"
-                    rows="10"
-                    className="form-control"
-                  ></textarea>
-                </div>
-                {this.state.isLoading ? (
-                  <Spinner color="secondary" />
-                ) : (
-                  <button
-                    onClick={this.onSubmit}
-                    className="btn btn-secondary"
-                    style={{ backgroundColor: "#343a40" }}
-                  >
-                    <FontAwesomeIcon icon={faSave} /> Simpan
-                  </button>
-                )}
+      <div className="m-3">
+        <BackComponent />
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">Tambah Post</h5>
+            <div className="card-text">
+              <div className="form-group">
+                <label>User</label>
+                <input
+                  type="text"
+                  name="user_id"
+                  value={this.state.user_id}
+                  onChange={this.handleInput}
+                  className="form-control"
+                />
               </div>
+              <div className="form-group">
+                <label>Judul</label>
+                <input
+                  type="text"
+                  value={this.state.title}
+                  className="form-control"
+                  name="title"
+                  onChange={this.handleInput}
+                />
+              </div>
+              <div className="form-group">
+                <label>Isi</label>
+                <textarea
+                  value={this.state.body}
+                  onChange={this.handleInput}
+                  name="body"
+                  cols="30"
+                  rows="10"
+                  className="form-control"
+                ></textarea>
+              </div>
+              {this.state.isLoading ? (
+                <Spinner color="secondary" />
+              ) : (
+                <button
+                  onClick={this.onSubmit}
+                  className="btn btn-secondary"
+                  style={{ backgroundColor: "#343a40" }}
+                >
+                  <FontAwesomeIcon icon={faSave} /> Simpan
+                </button>
+              )}
             </div>
           </div>
-        </Container>
+        </div>
       </div>
     );
   }
