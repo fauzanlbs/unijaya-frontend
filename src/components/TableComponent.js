@@ -40,9 +40,9 @@ const columns = [
   {
     dataField: "id",
     text: "ID",
-    sort: true,
+    // sort: true,
     headerStyle: () => {
-      return { width: "10%", backgroundColor: "lightgrey", fontSize: "20px" };
+      return { width: "12%", backgroundColor: "lightgrey", fontSize: "20px" };
     },
   },
   {
@@ -65,30 +65,30 @@ const columns = [
     dataField: "link",
     text: "AKSI",
     headerStyle: () => {
-      return { width: "35%", fontSize: "20px", backgroundColor: "lightgrey" };
+      return { width: "30%", fontSize: "20px", backgroundColor: "lightgrey" };
     },
     formatter: (rowContent, row) => {
       return (
         <div>
           <Link to={"detail/" + row.id}>
-            <Button color="dark" className="m-2">
-              <FontAwesomeIcon icon={faInfo} /> Detail
+            <Button style={{width:'50px',padding:'5px'}} color="dark" className="m-2 ">
+              <FontAwesomeIcon icon={faInfo} />
             </Button>
           </Link>
           <Link to={"edit/" + row.id}>
-            <Button color="dark" className="m-2">
-              <FontAwesomeIcon icon={faEdit} /> Edit
+            <Button style={{width:'50px',padding:'5px'}} color="dark" className="m-2">
+              <FontAwesomeIcon icon={faEdit} />
             </Button>
           </Link>
 
-          <Button
+          <Button style={{width:'50px',padding:'5px'}}
             onClick={() => {
               onDelete(row.id);
             }}
             color="dark"
             className="m-2"
           >
-            <FontAwesomeIcon icon={faTrash} /> Padam
+            <FontAwesomeIcon icon={faTrash} />
           </Button>
         </div>
       );

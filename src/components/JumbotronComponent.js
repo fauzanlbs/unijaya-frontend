@@ -15,7 +15,7 @@ const JumbotronComponent = (props) => {
 
           <p className="lead">
             <Link to={"/create"}>
-              <Button style={{ backgroundColor: "#343a40" }}>
+              <Button style={{ backgroundColor: "#343a40", width:'150px',padding:'8px' }}>
                 {" "}
                 Tambah Post <FontAwesomeIcon icon={faCoffee} />
               </Button>
